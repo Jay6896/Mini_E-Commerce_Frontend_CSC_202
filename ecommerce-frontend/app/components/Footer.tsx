@@ -1,12 +1,17 @@
+import { Cpu } from "lucide-react";
+import { FaTwitter, FaInstagram, FaYoutube, FaGithub} from "react-icons/fa";
+
+
 export function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-20">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="footer-columns">
+
            <div className="space-y-4">
                 <div className="flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600">
-      
+                        <Cpu className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-xl font-bold text-gray-900 tracking-tight">
                     T3ch<span className="text-red-500">World</span>
@@ -15,7 +20,16 @@ export function Footer() {
                 <p className="text-sm text-gray-500 leading-relaxed">
                     Your premium destination for the latest tech devices. Curated selection, expert advice, and fast delivery.
                 </p>
-                <div className="social-links"></div>
+                <div className="social-links">
+                    <div className="flex items-center gap-3">
+                        {[FaTwitter, FaInstagram, FaYoutube, FaGithub].map((Icon, i) => (
+                            <button key={i} 
+                            className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100 text-gray-500">
+                                <Icon className="h-4 w-4" />
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
       </div>
