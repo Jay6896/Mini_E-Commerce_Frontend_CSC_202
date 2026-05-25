@@ -25,7 +25,6 @@ export default function CheckoutPage() {
     postal_code: "",
     country: "",
   });
-
   if (authLoading) {
     return (
       <Layout>
@@ -35,7 +34,6 @@ export default function CheckoutPage() {
       </Layout>
     );
   }
-
   if (!user) {
     return (
       <Layout>
@@ -51,7 +49,6 @@ export default function CheckoutPage() {
       </Layout>
     );
   }
-
   if (cartItems.length === 0) {
     return (
       <Layout>
@@ -123,7 +120,8 @@ export default function CheckoutPage() {
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
 
         <Link href="/cart" className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 mb-8">
-          <ArrowLeft className="w-4 h-4" /> Back to Cart
+          <ArrowLeft className="w-4 h-4" /> 
+          Back to Cart
         </Link>
 
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
@@ -138,11 +136,9 @@ export default function CheckoutPage() {
                 </div>
               )}
 
-
               <div>
                 <h2 className="text-xl font-bold mb-4">Shipping Address</h2>
                 <div className="space-y-4">
-                  {/* Map these standard inputs out for Full Name, Email, Address, and Country */}
                   <div>
                     <label className="block text-sm font-medium mb-1">
                         Full Name</label>
@@ -180,8 +176,6 @@ export default function CheckoutPage() {
                       className="w-full px-4 py-2 border border-gray-200 dark:border-zinc-800 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                     />
                   </div>
-
-                  {/* Grid for City and Postal Code */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-1">
@@ -225,8 +219,6 @@ export default function CheckoutPage() {
               </button>
              </form>
           </div>
-
-
           <div className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-6 h-fit">
             <h2 className="text-xl font-bold mb-6">Order Summary</h2>
             <div className="space-y-4 mb-6 pb-6 border-b border-gray-200 dark:border-zinc-800">
